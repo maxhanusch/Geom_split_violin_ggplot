@@ -1,4 +1,5 @@
 # https://stackoverflow.com/a/45614547
+# code from answer provided by jan-glx
 GeomSplitViolin <- ggproto("GeomSplitViolin", GeomViolin, draw_group = function(self, data, ..., draw_quantiles = NULL){
   data <- transform(data, xminv = x - violinwidth * (x - xmin), xmaxv = x + violinwidth * (xmax - x))
   grp <- data[1,'group']
